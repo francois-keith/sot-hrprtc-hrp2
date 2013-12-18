@@ -102,7 +102,7 @@ void RtcStackOfTasks::saveLog() const
   std::ofstream logTime (filename.c_str());
   if(logTime.is_open())
   {
-    for(unsigned i=0;i<std::min(timeIndex_, timeArray_.size()); ++i)
+    for(unsigned i=0;i<std::min<unsigned>(timeIndex_, timeArray_.size()); ++i)
       logTime << i << "   " << "   " << timeArray_[i] << std::endl;
     logTime.close();
   }
